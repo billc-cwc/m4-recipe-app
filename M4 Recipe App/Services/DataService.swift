@@ -36,9 +36,14 @@ class DataService {
                 // Decode the json file into Recipe array
                 let recipeData = try decoder.decode([Recipe].self, from: data)
                 
-                // Assign unique ids
+                // Assign unique ids to each recipe
                 for r in recipeData {
                     r.id = UUID()
+                    
+                    // Assign unique ids to each ingredient in this recipe
+                    for i in r.ingredients {
+                        i.id = UUID()
+                    }
                 }
                 
                 return recipeData

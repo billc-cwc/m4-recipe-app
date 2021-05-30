@@ -19,7 +19,9 @@ class RecipeModel: ObservableObject {
         
         // Note - above could be shortened to the following if we modify getLocalData to be
         // static, as in: static func getLocalData() -> [Recipe] ... and then this:
+        
         // self.recipes=DataService.getLocalData()
+        
         // This does NOT create an instance of DataService since there's no need for it.
         
     }
