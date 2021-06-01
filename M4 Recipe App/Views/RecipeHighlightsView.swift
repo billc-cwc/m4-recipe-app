@@ -29,7 +29,7 @@ struct RecipeHighlightsView: View {
     var body: some View {
         
         Text(allHighlights)
-    }
+            .font(Font.custom("Avenir", size: 15))    }
 }
 
 struct RecipeHighlightsView_Previews: PreviewProvider {
